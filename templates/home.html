@@ -1,9 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>George's Website</title>
+        <style>
+            h1 {
+                font-size: 40px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: normal;
+                color: rgb(18, 28, 210);
+                text-align: center;
+            }
+            #banner {
+                width: 100%;
+                height: 5%;
+                object-fit: cover;
+            }
+            h2 {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 32;
+                color: rgb(106, 113, 244);
+                text-align: center;
+                font-weight: normal;
+            }
+            .body text {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: rgb(80, 80, 80);
+                text-align: justify;
+            }
+            #container {
+                max-width: 720px;
+                margin: 0 auto 0 auto;
+            }
+        </style>
     </head>
     <body>
-        Hello, welcome to my Website
+        <div id="container">
+            <h1>Home</h1>
+            <img id="banner" src="http://www.htmldog.com/badge1.gif"  alt="HTML Dog">
+            <h2>About George</h2>
+            <p class="body text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <h2>Projects</h2>
+            <p class="body text">TODO - Show the projects here</p>
+            <div style="text-align: center;">
+            <button>Get in touch</button>
+            <p>Copyright 2022, George</p>
+            </div>
+        </div>
     </body>
 </html>
