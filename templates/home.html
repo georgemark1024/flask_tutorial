@@ -2,50 +2,26 @@
 <html lang="en">
     <head>
         <title>George's Website</title>
-        <style>
-            h1 {
-                font-size: 40px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-weight: normal;
-                color: rgb(18, 28, 210);
-                text-align: center;
-            }
-            #banner {
-                width: 100%;
-                height: 5%;
-                object-fit: cover;
-            }
-            h2 {
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 32;
-                color: rgb(106, 113, 244);
-                text-align: center;
-                font-weight: normal;
-            }
-            .body text {
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color: rgb(80, 80, 80);
-                text-align: justify;
-            }
-            #container {
-                max-width: 720px;
-                margin: 0 auto 0 auto;
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     </head>
     <body>
-        <div id="container">
-            <h1>Home</h1>
-            <img id="banner" src="http://www.htmldog.com/badge1.gif"  alt="HTML Dog">
-            <h2>About George</h2>
-            <p class="body text">
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">Home</h1>
+            <img class="img-fluid" id="banner" src="http://www.htmldog.com/badge1.gif"  alt="HTML Dog">
+            <h2 class="text-center mt-2 mb-4">About George</h2>
+            <p class="lead">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <h2>Projects</h2>
-            <p class="body text">TODO - Show the projects here</p>
-            <div style="text-align: center;">
-            <button>Get in touch</button>
-            <p>Copyright 2022, George</p>
+            <h2 class="text-center mt-2 mb-4">Roles</h2>
+            <div>
+                {% for role in roles %}
+                {% include 'roles.html'%}
+                {% endfor %}
+            </div>
+            <div class="text-center">
+            <button class="btn btn-primary btn-sm">Get in touch</button>
+            <p class="mt-4">Copyright 2022, George</p>
             </div>
         </div>
     </body>
